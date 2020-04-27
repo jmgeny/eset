@@ -8,7 +8,7 @@
  <div class="container">   
 <div class="row">
   <div class="col-md-6 offset-md-3"> 
-    <h4>La edad promedio de la empresa {{ $empresa->nombre }} es de {{ $promedioEdad }}</h4>
+    <h4>La edad promedio de la empresa {{ $empresa->nombre }} es de {{ number_format($promedioEdad,2) }}</h4>
     <table class="table">
         <thead>
           <tr>

@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+         
+                <div class="links">
+                    <a href="{{ route('empresa.index') }}">Empresa</a>
+                    <a href="{{ route('empleado.index') }}">Empleado</a>
+                </div>
+           
                 </div>
             </div>
         </div>

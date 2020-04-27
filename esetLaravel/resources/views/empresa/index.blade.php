@@ -8,6 +8,9 @@
  <div class="container">  
  <div class="row">
   <div class="col-md-6 offset-md-3"> 
+    <a  class="btn btn-primary float-right" href="{{ route('empresa.create') }}">Cargar</a>
+    <br>
+    <br>
 
 	<table class="table">
   <thead>

@@ -26,7 +26,7 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        //
+        return view('empresa.create');
     }
 
     /**
@@ -37,7 +37,9 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $empresa = Empresa::create($request->all());
+        return redirect()->route('empresa.index');
     }
 
     /**
