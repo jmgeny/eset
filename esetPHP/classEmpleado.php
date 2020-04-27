@@ -1,17 +1,15 @@
 <?php 	
 
-class Empleado
+class ClassEmpleado
 {
 	public $_nombre;
 	public $_apellido;
 	public $_edad;
-
 	
 	public function setNombre($nombre)
 	{
 		$this->_nombre = $nombre;
 	}
-	
 	public function getNombre()
 	{
 		return $this->_nombre;
@@ -21,7 +19,6 @@ class Empleado
 	{
 		$this->_apellido = $apellido;
 	}
-	
 	public function getApellido()
 	{
 		return $this->_apellido;
@@ -31,11 +28,15 @@ class Empleado
 	{
 		$this->_edad = $edad;
 	}
-
 	public function getEdad()
 	{
 		return $this->_edad;
-	}	
+	}
+
+	public buscarempleado($apellido)
+	{
+
+	}
 
 	public function mostrarDatos()
 	{

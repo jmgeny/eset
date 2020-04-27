@@ -1,8 +1,8 @@
 <?php 
 
-require 'empleado.php';
+require 'classEmpleado.php';
 
-class Programador extends Empleado
+class ClassProgramador extends ClassEmpleado
 {
 	 private $lenguaje;
 
