@@ -33,14 +33,9 @@ class ClassEmpleado
 		return $this->_edad;
 	}
 
-	public buscarempleado($apellido)
-	{
-
-	}
-
 	public function mostrarDatos()
 	{
-		
+	
 		echo  'Edad: '.$this->_edad. '<br>'  .' Apellido: ' .$this->_apellido. '<br>'. 'Nombre: ' . $this->_nombre;
 	}
 }

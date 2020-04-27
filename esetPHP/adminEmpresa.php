@@ -11,7 +11,7 @@
 	<div class="container">
 		<h1>Empresa</h1>
 		<div class="row">
-			<div class="col-md-4 offset-md-4">
+			<div class="col-md-6 offset-md-3">
 				<form action="adminEmpresa.php" method="POST">
 					<div class="form-group">
 						<input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="emailHelp" placeholder="Nombre de la Empresa">
@@ -19,6 +19,8 @@
 					</div>
 					<button type="submit" class="btn btn-success" name="btnConsultar">Consultar</button>
 					<button type="submit" class="btn btn-primary" name="btnGrabar">Guardar</button>
+					<button type="submit" class="btn btn-primary" name="btnAgregar">Empleado</button>
+
 					<a class="btn btn-primary" href="index.php">Inicio</a>
 				</form>			
 			</div>
@@ -27,6 +29,17 @@
 		<?php 
 
 		require('classEmpresa.php');
+		if (isset($_POST['btnAgregar'])) {
+
+			if (trim($_POST['nombre']))
+			{
+				include('adminEmpleado.php');
+			}
+			else
+			{
+				echo 'Debe agregar un nombre para agregar empleado';
+			}
+		}
 
 		if (isset($_POST['btnGrabar'])) 
 		{
@@ -34,7 +47,8 @@
 				$empresa = new ClassEmpresa();
 				$empresa->guardarEmpresa($_POST['nombre']);
 				echo $empresa->getNombre();
-			} else
+			} 
+			else
 			{
 				echo 'Debe agregar un nombre para guardar';
 			}
@@ -50,13 +64,7 @@
 			}
 
 		}
-
-		?>		
-
-		
-
-
-
+		?>
 
 	</div>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -71,7 +71,7 @@ echo "
 				echo "</table>";
 
 			$_promedio = $_suma / $_cuenta;
-			echo 'El promedio de edad de la empresa es de '.$_promedio;
+			echo 'En la empresa '. $nombre . ' el promedio de edad de la empresa es de '.$_promedio;
 		} 
 
 		else

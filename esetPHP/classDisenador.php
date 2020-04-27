@@ -29,7 +29,6 @@ class ClassDisenador extends ClassEmpleado
 		echo '<br>';
 		echo '<br>';
 		echo $this->getTipo();
-		// $this->mostrarDatos();
 	}
 
 	public function guardarDisenador()
