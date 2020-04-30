@@ -56,7 +56,7 @@ class EmpleadoController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('empleado.show');
     }
 
     /**

@@ -43,10 +43,10 @@ class ClassDisenador extends ClassEmpleado
 		$id_empresa = $_POST['id_empresa'];
 	
 		$conexion->query("INSERT INTO $tabla_db2 (nombre, apellido, edad, puesto , herramienta, id_empresa)
-		 		values ('$nombre', '$apellido', '$edad', '$puesto', '$herramienta','$id_empresa')");
+		  		values ('$nombre', '$apellido', '$edad', '$puesto', '$herramienta','$id_empresa')");
 
 
-		echo 'SE GUARDO EL NUEVO EMPLEADO con: '. $nombre . ' - ' .$apellido.' '.$edad.' '.$puesto.' '.$herramienta.' '.$id_empresa;
+		echo 'Datos Enviados: '. $nombre . ' ' .$apellido.'  - - '.$edad.' - Puesto: '.$puesto.' '.$herramienta;
 
 		include("cerrar_conexion");
 	}
