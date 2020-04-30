@@ -1,34 +1,35 @@
 {{-- @extends('layouts.app')
 
-@section('title', 'Show Show')
+@section('title', 'Crear mensaje')
 
 @section('content')
 
 <div class="container">   
 	<h2>Show</h2>
-
-		<select name="select" id="select">
+		<select name="puesto" id="puesto">
 			<option value="">Seleccionar</option>
-			<option value="tipo">uno</option>
-			<option value="lenguaje">dos</option>
+			<option value="div_programador">progamador</option>
+			<option value="div_disenador">disenador</option>
 		</select>
 
-	<div id="ganselect">
-
-		<div name="uno" id="tipo">
-			<option value="uno-uno">uno-uno</option>
-			<option value="uno-dos">uno-dos</option>
-		</div>
-
-		<br>
-		<br>
-
-		<div name="dos" id="lenguaje">
-			<option value="dos-uno">dos-uno</option>
-			<option value="dos-dos">dos-dos</option>
-		</div>
+	<div id="div_programador">
+	        <div class="form-group">
+	          <label for="programador">Progamador</label>
+	          <select class="form-control" id="programador" name="herramienta">
+	            <option value="PHP">PHP</option>
+	            <option value="Python">Python</option>
+	            <option value="NET">NET</option>
+	          </select>
+	        </div>
 	</div>
-
-
+	<div id="div_disenador">
+	        <div class="form-group">
+	          <label for="disenador">Diseñador</label>
+	          <select class="form-control" id="disenador" name="herramienta">
+	            <option value="web">Web</option>
+	            <option value="diseño">Diseño</option>
+	          </select>
+	        </div> 
+	</div>
 </div>
 @endsection --}}

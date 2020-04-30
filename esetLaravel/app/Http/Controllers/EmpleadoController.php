@@ -43,8 +43,25 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        $empleado = Empleado::create($request->all());
+        $empleado = new Empleado;
 
+        $empleado->nombre = $request->nombre;
+        $empleado->apellido = $request->apellido;
+        $empleado->edad = $request->edad;
+        $empleado->puesto = $request->puesto;
+        $empleado->empresa_id = $request->empresa_id;
+
+        if ($request->puesto === "disenador") 
+        {
+            $empleado->herramienta = $request->disenador;
+        } else
+        {
+            $empleado->herramienta = $request->programador;
+        }
+
+        $empleado->save();
+
+        // $empleado = Empleado::create($request->all());
         return redirect()->route('empleado.index');
     }
 

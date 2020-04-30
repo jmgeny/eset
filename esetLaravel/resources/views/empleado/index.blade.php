@@ -30,6 +30,8 @@
         <th scope="col">Apellido</th>
         <th scope="col">edad</th>
         <th scope="col">Empresa</th>
+        <th scope="col">Puesto</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -40,6 +42,8 @@
        <td>{{ $empleado->apellido }}</td>
        <td>{{ $empleado->edad }}</td>
        <td>{{ $empleado->empresa->nombre }}</td>
+       <td>{{ $empleado->puesto }}</td>
+       <td>{{ $empleado->herramienta }}</td>       
      </tr>
      @endforeach
    </tbody>

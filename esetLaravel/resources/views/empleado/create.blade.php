@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('title', 'Crear empleado')
@@ -13,17 +12,16 @@
       <form action="{{ route('empleado.store') }}" method="POST">
         @csrf
         
-        <div class="form-group">
-          <label for="puesto">Empresas</label>
-          <select class="form-control" id="puesto" name="empresa_id">
+          <div class="form-group">
+          <label for="empresa">Empresas</label>
+          <select class="form-control" id="empresa" name="empresa_id">
 
             @foreach ($empresas as $empresa)
             <option value="{{ $empresa->id }}" selected>{{ $empresa->nombre }}</option>
             @endforeach
 
           </select>
-        </div>
-        
+        </div> 
 
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -37,29 +35,36 @@
           <label for="edad">Edad</label>
           <input type="text" class="form-control" name="edad" id="edad">
         </div>
+
         <div class="form-group">
           <label for="puesto">Puesto</label>
           <select class="form-control" id="puesto" name="puesto">
-            <option value="programador" selected>Programador</option>
-            <option value="diseñador">Diseñador</option>
+            <option value="">Elejir</option>
+            <option value="programador">Programador</option>
+            <option value="disenador">Diseñador</option>
           </select>
         </div>
 
+<div id="programador">
         <div class="form-group">
-          <label for="herramienta">Herramienta/Tipo</label>
-
-          <select class="form-control" id="herramienta" name="herramienta">
-            <option value="web">Web</option>
-            <option value="diseño">Diseño</option>
+          <label for="programador">Progamador</label>
+          <select class="form-control" name="programador">
             <option value="PHP">PHP</option>
             <option value="Python">Python</option>
             <option value="NET">NET</option>
           </select>
-
         </div>
+</div>        
 
-
-
+<div id="disenador">
+        <div class="form-group">
+          <label for="disenador">Diseñador</label>
+          <select class="form-control" name="disenador">
+            <option value="web">Web</option>
+            <option value="diseño">Diseño</option>
+          </select>
+        </div>        
+</div>        
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
